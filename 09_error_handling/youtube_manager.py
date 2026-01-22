@@ -15,10 +15,10 @@ def save_data_helper(videos):
         json.dump(videos, file)
 
 def list_all_videos(videos):
-    print("-" * 50)
+    print("=" * 50)
     for index, video in enumerate(videos, start=1):
         print(f"{index}. Name: {video['name']}, Duration: {video['time']}")
-    print("-" * 50)
+    print("=" * 50)
 
 def add_video(videos):
     name = input("Enter video name: ")
@@ -44,7 +44,7 @@ def delete_video(videos):
         del videos[index-1]
         save_data_helper(videos)
     else:
-        print("Invalid video index selected!")
+        print("Invalid index selected!")
 
 def main():
     videos = load_data()
