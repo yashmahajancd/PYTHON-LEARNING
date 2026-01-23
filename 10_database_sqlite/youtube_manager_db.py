@@ -14,31 +14,36 @@ cur.execute('''
 
 def list_videos():
     cur.execute("SELECT * FROM videos")
+    print("\n")
+    print("=" * 50)
+    print("=" * 50)
     for row in cur.fetchall():
         print(row)
+    print("=" * 50)
+    print("=" * 50)
 
 def add_video(name, time):
     cur.execute("INSERT INTO videos (name, time) VALUES (?, ?)", (name, time))
-    cur.commit()
+    conn.commit()
 
 def update_video(video_id, new_name, new_time):
     cur.execute("UPDATE videos SET name = ?, time = ? WHERE id = ?", (new_name, new_time, video_id))
-    cur.commit()
+    conn.commit()
 
 def delete_video(video_id):
     cur.execute("DELETE FROM videos WHERE id = ?", (video_id,))
-    cur.commit()
+    conn.commit()
 
 def main():
     while True:
-        print("\nYoutube Maneger App With DB")
-        print("=" * 50)
+        print("\nYOUTUBE MANAGER APP WITH DB")
+        print("-" * 40)
         print("1. List Videos")
         print("2. Add Videos")
         print("3. Update Videos")
         print("4. Delete Videos")
         print("5. Exit App")
-        print("=" * 50)
+        print("-" * 40)
         choice = input("Enter Your Choice : ")
         
         if choice == '1':
