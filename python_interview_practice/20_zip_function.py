@@ -1,3 +1,3 @@
-a = [1,2]
-b = ['a','b']
-print(list(zip(a,b)))
+x = [1,2]
+y = ['x','y']
+print(list(zip(x,y)))
