@@ -1,3 +1,3 @@
-def fact(n):
-    return 1 if n==0 else n*fact(n-1)
+def fact(i):
+    return 1 if i==0 else i*fact(i-1)
 print(fact(5))
