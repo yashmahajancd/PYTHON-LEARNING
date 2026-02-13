@@ -1,0 +1,1 @@
+objs=[User("A",20),User("B",30)]
