@@ -1,0 +1,2 @@
+def coro():
+    x=yield
