@@ -1,0 +1,1 @@
+open("requirements.txt").read()
